@@ -131,7 +131,7 @@ jobs:
       - name: Setup Infracost
         uses: infracost/actions/setup@v3
         with:
-          api-key: ${{ secrets.INFRACOST_API_KEY }}
+          api-key:ico-xLYWa7sJ57LV5Ao49crw6ysYRVlZdRAX
 
       - name: Infracost Breakdown
         run: |

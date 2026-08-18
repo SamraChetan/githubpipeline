@@ -17,7 +17,7 @@ permissions:
 
 env:
   TF_VERSION: "1.9.8"
-  TF_WORKING_DIR: "./environment/prod"
+  TF_WORKING_DIR: "/environment/prod"
 
 jobs:
 
@@ -140,7 +140,7 @@ jobs:
       - name: Infracost Breakdown
         working-directory: ${{ env.TF_WORKING_DIR }}
         env:
-          INFRACOST_API_KEY: ${{ secrets.INFRACOST_API_KEY }}
+          INFRACOST_API_KEY: ico-xLYWa7sJ57LV5Ao49crw6ysYRVlZdRAX
         run: |
           infracost breakdown \
             --path . \
@@ -174,9 +174,9 @@ jobs:
       - name: Azure Login
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          client-id: c250a887-83bb-4856-96ee-b7916896f079
+          tenant-id: 9fc55e6c-fd66-4dc3-8291-4392a2ad8c35
+          subscription-id: 6e087706-38d2-46e4-b4f9-39ceebf097a2
 
       # --------------------------------------------------------
       # Terraform
@@ -237,9 +237,9 @@ jobs:
       - name: Azure Login
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          client-id: c250a887-83bb-4856-96ee-b7916896f079
+          tenant-id: 9fc55e6c-fd66-4dc3-8291-4392a2ad8c35
+          subscription-id: 6e087706-38d2-46e4-b4f9-39ceebf097a2
 
       # --------------------------------------------------------
       # Terraform
